@@ -1,0 +1,37 @@
+{%extends "account/base.html"%}
+{% load crispy_forms_tags  %}
+{% load staticfiles %}
+
+{% block title %}
+<title> home</title>
+	{% endblock %}
+	{% block css %}
+     <link rel="stylesheet" type="text/css" href="{% static 'CSS\base.css'%}">
+
+
+	{% endblock %}
+	
+
+	{% block site_wrapper %}
+  <center>
+  <!--h1> welecome {{ user_id.first_name|capfirst}}</h1-->
+  {% if p_form %}
+<form method="POST" action="{% url 'Account:upload' %}"  enctype="multipart/form-data">
+  {% csrf_token %}
+   
+              {{ p_form}}
+  
+   
+  <button type="submit"  class="button" value="Register"> upload
+				</button>
+	</form>
+     {%endif%}
+     </center>
+      
+  
+  
+
+
+    
+
+ {% endblock %}

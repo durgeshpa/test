@@ -1,0 +1,52 @@
+{%extends "account/index.html"%}
+{% load crispy_forms_tags  %}
+{% load staticfiles %}
+
+{% block title %}
+<title> LOG IN</title>
+	{% endblock %}
+
+	{% block javascript %}
+
+	{% endblock %}
+	{% block css %}
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'CSS\registration.css'%}">
+     
+    
+	{% endblock %}
+	
+
+	{% block site_wrapper %}
+     <!--div class="background" style="background-image:url(https://cdn.hipwallpaper.com/i/76/64/4fPMU5.jpg)"-->
+
+
+		<center>
+	  	<div id=h1>
+	<h1 >CS Developer</br>
+		<a type="button" class="btn btn-primary" id="signin" style="float: right;" href="{% url 'password_reset' %}"> Forget password</a>
+		 <a type="button" class="btn btn-primary" style="float: right;" href="{% url 'Account:registration' %}"> Sign Up</a></h1>
+    </div>
+   
+		<form action="{% url 'Account:login' %}" method="POST">
+			{% csrf_token %}
+		username:
+		<br/>
+		<input type="text" id='username' name="username" placeholder="username" >
+        <br/>
+		password:
+		<br/>
+		<input type="password" id='password' name="password" placeholder="password" >
+		
+		<br/>
+		<button type="submit"   class="btn btn-success" value="submit" > submit</button>
+		</form>
+
+
+
+		{% if message %}
+		<h3>{{message}}</h3>
+		{% endif %}
+    </center>
+</div>
+ {% endblock %}

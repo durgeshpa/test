@@ -1,0 +1,71 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	 <link rel="stylesheet" type="text/css" href="{% static '\CSS\base.css' %}">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ 
+	</style>
+	{% block title %}
+	{% endblock %}
+	{% block javascript %}
+	{% endblock %}
+	{% block css %}
+	{% endblock %}
+</head>
+<body>
+
+
+	<div class="header">
+		<center>
+	<div class="header-center" >
+		<!--h1 class= "name">{{ user_id.first_name|capfirst}}</h1-->
+	
+     <!--img src="{{request.user.profile.image.url}}"  height="60" width="60" id="img" align="left" alt=""/ -->
+     
+    </div>
+    </center>
+    
+
+    <div class="header">
+  
+  <div class="header-right">
+    <a class="active" href="{% url 'Account:home' %}">Home</a>
+    <a href="{% url 'Account:logout' %}">logout</a>
+    <a href="#about">About</a>
+    
+  </div>
+  <h1 id='cs'>Cs Devloper</h1>
+</div>
+  
+	<!--div class='header'-->
+	<!--center>
+	<h1 >CS Developer</br><a type="button"class='signout' style="float: right ;" href="{% url 'Account:logout' %}"> Sign Out</a-->
+		
+	
+        <!--img src="{{request.user.profile.image.url}}"  height="50" width="50" id="img" align="left" alt=""/ -->
+    <h3 class= "name">{{ user_id.first_name|capfirst}}</h3>
+</div>
+	<!--/center-->
+</h1>
+
+  
+
+
+
+	  {% block site_wrapper %}
+ {% endblock %}
+</body>
+</html>
