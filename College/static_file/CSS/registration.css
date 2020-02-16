@@ -49,7 +49,7 @@
 
   }
   body{margin-top: 0px;
- background-image: url(https://cdn.hipwallpaper.com/i/76/64/4fPMU5.jpg);
+ background-image: url('../background/img/college.jpg ');
  
 }
 
@@ -112,6 +112,8 @@ input{
 
   h1{
     text-shadow: 2px 2px #ff0000;
+
+
   }
 
   .form-control{
@@ -147,4 +149,8 @@ input{
   }
   h3{
     text-shadow: 2px 2px brown;
+  }
+
+  .form-control{
+    width: 30%;
   }

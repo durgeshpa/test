@@ -28,15 +28,7 @@
 <body>
 
 
-	<div class="header">
-		<center>
-	<div class="header-center" >
-		<!--h1 class= "name">{{ user_id.first_name|capfirst}}</h1-->
 	
-     <!--img src="{{request.user.profile.image.url}}"  height="60" width="60" id="img" align="left" alt=""/ -->
-     
-    </div>
-    </center>
     
 
     <div class="header">
@@ -48,18 +40,15 @@
     
   </div>
   <h1 id='cs'>Cs Devloper</h1>
-</div>
   
-	<!--div class='header'-->
-	<!--center>
-	<h1 >CS Developer</br><a type="button"class='signout' style="float: right ;" href="{% url 'Account:logout' %}"> Sign Out</a-->
-		
-	
-        <!--img src="{{request.user.profile.image.url}}"  height="50" width="50" id="img" align="left" alt=""/ -->
-    <h3 class= "name">{{ user_id.first_name|capfirst}}</h3>
 </div>
-	<!--/center-->
-</h1>
+ 
+		
+	<div id ='profile' align="right">
+        <img src="{{request.user.profile.image.url}}"  height="100" width="100" id="img"  alt="">
+    <h3 class= "name" id='user_name'>{{ user_id.first_name|capfirst}}</h3>
+	</div>
+
 
   
 

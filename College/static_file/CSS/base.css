@@ -1,7 +1,8 @@
 body{
 
 
-background-image: url(https://cdn.hipwallpaper.com/i/76/64/4fPMU5.jpg);
+background-image: url('../background/img/college.jpg ');
+ 
  
 }
 
@@ -65,4 +66,18 @@ background-image: url(https://cdn.hipwallpaper.com/i/76/64/4fPMU5.jpg);
 	margin-bottom: 10px;
 	text-shadow: 2px 3px blue;
 	margin-bottom: 10px;
+}
+#profile{  
+ /* border-left-width: thin;
+  background-color: blue;*/
+
+}
+#user_name{
+           margin-left: 2px;
+           margin-right: 2px;
+}
+#img{
+   padding: 3px;
+  padding-color:blue;
+  background-color: blue;
 }
