@@ -11,6 +11,8 @@ app_name="Account"
 urlpatterns=[
 url("^$",(views.signup_view) ,name="registration"),
 url('login',views.signin_view,name='login'),
+
+
 url('logout',views.logout_view,name='logout'),
 url('home',views.home,name='home'),
 
