@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	 <link rel="stylesheet" type="text/css" href="{% static '\CSS\base.css' %}">
+	 <!--link rel="stylesheet" type="text/css" href="{% static '\CSS\base2.css' %}"-->
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -54,7 +55,20 @@
 
 
 
-	  {% block site_wrapper %}
+{% block site_wrapper %}
  {% endblock %}
+
+<footer class="footer">
+  
+      <ul >
+        <li><a href="http://facebook.com/designmodo" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.facebook.com/profile.php?id=100028171894440"></use></svg></a></li>
+        <li><a href="http://twitter.com/designmodo" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
+        <li><a href="http://instagram.com/designmodo" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram"></use></svg></a></li>
+      <ul>
+    
+  
+
+
+</footer>
 </body>
 </html>

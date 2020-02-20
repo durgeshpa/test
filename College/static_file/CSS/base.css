@@ -81,3 +81,25 @@ background-image: url('../background/img/college.jpg ');
   padding-color:blue;
   background-color: blue;
 }
+
+.black{
+        height-bottom: 20px;
+}
+
+
+.footer {
+  display: block;
+  background-color: rgba(0,0,0,.8);
+  position: fixed;
+  left: 0;
+  top:85%;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+.footer-inner{
+  background-color: white;
+  visibility: 10%;
+}
