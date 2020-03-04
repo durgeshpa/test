@@ -1,0 +1,43 @@
+       #container
+{
+  width:15px;
+  float: left;
+  color: Gray;
+  font-family: Courier New;
+  font-size: 14px;
+  overflow: hidden;
+  height: 500px;
+    position: relative;
+    
+    margin-top: -2px;
+    margin-top: 0px;
+    background-color: white;
+}
+#divlines 
+{
+  position: absolute;
+  color: red;
+
+}
+#text1 
+{
+  overflow-x: scroll;
+  height: 500px;
+  font-family: Courier New;
+  font-size: 14px;
+}
+
+       #containers
+{
+  float: right;
+  overflow-x: scroll;
+  height: 500px;
+  width: 37.5%;
+  align-self: right;
+  font-size: 14px;
+  background-color: white;
+  margin-top: -574px;
+  padding: 5px
+  padding-color:blue;
+
+}

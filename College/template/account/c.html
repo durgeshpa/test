@@ -1,0 +1,83 @@
+{%extends "account/base.html"%}
+{% load crispy_forms_tags  %}
+{% load staticfiles %}
+
+{% block title %}
+<title> home</title>
+	{% endblock %}
+	{% block css %}
+     <link rel="stylesheet" type="text/css" href="{% static 'CSS\base.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static '\CSS\c.css' %}">
+
+	{% endblock %}
+	
+
+	{% block site_wrapper %}
+ 
+  <!--h1> welecome {{ user_id.first_name|capfirst}}</h1-->
+<div id="container"  width ='29' >
+<div id="divlines"  width ='29' >
+</div>
+</div>
+<div id ='class'>
+<form method="POST" action="{% url 'C_language:c_compile' %}"  enctype="multipart/form-data">
+  {% csrf_token %}
+   
+  <textarea id="text1"type="text" name="code" rows="15" cols="100" onkeyup="Allow()">
+  </textarea><br>
+   
+  <button type="submit"  class="button" value="Register" > submit
+				</button>
+	</form>
+  <div id ='containers' cols="10" align="left" onkeyup="Allow()">
+    <h2 style="color: blue;">output:</h1>
+      {% if output %}
+      
+      <br>
+       {% for  outputs in output%}
+
+     <h4 style="color: black;">{{outputs}}</h1>
+     {% endfor%}
+     {% endif %}
+     {% if error %}
+      
+     <h4 style="color: red;">{{error}}</h1>
+     {% endif %}
+
+    
+    </div>
+
+   </div>
+ </div>
+ <script type="text/javascript">
+var lines = document.getElementById("divlines");
+var txtArea = document.getElementById("text1");
+window.onload = function() {
+    refreshlines();
+    txtArea.onscroll = function () {
+        lines.style.top = -(txtArea.scrollTop) + "px";
+        return true;
+    }
+    txtArea.onkeyup = function () {
+        refreshlines();
+        return true;
+    }
+}
+
+function refreshlines() {
+    var nLines = txtArea.value.split("\n").length;
+    lines.innerHTML = ""
+    for (i=1; i<=nLines; i++) {
+        lines.innerHTML = lines.innerHTML + i + "." + "<br />";
+    }
+    lines.style.top = -(txtArea.scrollTop) + "px";     
+}
+</script>
+      
+  
+  
+
+
+    
+
+ {% endblock %}

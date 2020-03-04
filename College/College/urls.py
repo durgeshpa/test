@@ -20,11 +20,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 from Account import urls
+from C_language import urls as c_languge_url
 from django.conf.urls import url
 #app_name="Account"
 
 urlpatterns = [
 	url('Account/',include(urls,namespace='Account')),
+    url('Clanguage/',include(c_languge_url,namespace='C_language')),
     path('admin/', admin.site.urls),
     url('', include('django.contrib.auth.urls')),
         ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

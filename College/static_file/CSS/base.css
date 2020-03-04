@@ -75,6 +75,8 @@ background-image: url('../background/img/college.jpg ');
 #user_name{
            margin-left: 2px;
            margin-right: 2px;
+           padding-left: 85%;
+           padding-right: 2px;
 }
 #img{
    padding: 3px;
