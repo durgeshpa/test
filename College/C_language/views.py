@@ -1,7 +1,8 @@
-
-
-
 from django.shortcuts import render
+from django.template import RequestContext
+from django.http import JsonResponse
+import json
+from django.views.decorators.csrf import csrf_exempt
 import time
 # Create your views here.
 def compile(request):
@@ -12,7 +13,8 @@ def compile(request):
 		gcc='gcc'
 		outputs='outputs.txt'
 		data=request.POST.copy()
-		code=data.get('code')
+		code=(data.get('data'))
+		print(code)
 		file_name='main.c'
 		file_in='input.txt'
 		file_error='error.txt'
@@ -57,13 +59,16 @@ def compile(request):
 			os.remove(file_name)
 			os.remove(file_error)
 			
-			return render(request,'account/c.html',{'error':error,'output':output})
+			#return render(request,'account/c.html',{'error':error,'output':output})
+			print(output)
+			return JsonResponse(json.dumps({'error':error,'output':output}),safe=False)
 		else:
 			
 			os.remove(file_name)
 			os.remove(file_error)
+			print(error)
 
-			return render(request,'account/c.html',{'error':" execution time out",'output':None})
-
+			#return render(request,'account/c.html',{'error':" execution time out",'output':None})
+			return JsonResponse(json.dumps({'error':" execution time out"}),safe=False)
 	else:
 		return render(request,'account/c.html')
